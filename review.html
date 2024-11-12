@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+
+    <!-- BOOTSTRAP ICON LINK -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Customer Reviews</title>
+
+    <style>
+        .review-header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #reviewForm {
+            display: none;
+            max-height: 0;
+            padding: 0;
+            overflow: hidden;
+            transition: all 10s ease-in-out;
+        }
+
+        #reviewForm.show {
+            display: block;
+            max-height: 1000px;
+            padding: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-container button {
+            width: 48%;
+        }
+
+        img.card-img-top {
+            width: 100%;
+            height: 200px;
+            /* Adjust as needed */
+            object-fit: contain;
+            /* Show full image without cropping */
+        }
+
+        @media (max-width: 768px) {
+            img.card-img-top {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div id="navbar">
+        <script src="js/navbar.js"></script>
+    </div>
+    <!-- END OF NAVBAR -->
+
+    <div class="container mt-5 pt-5">
+        <div class="review-header text-center">
+            <h1>We Value Your Feedback!</h1>
+            <p>Share your thoughts or review your favorite products below:</p>
+            <button class="btn btn-dark w-100" id="toggleFormButton">Write a Review</button>
+        </div>
+
+        <div id="reviewForm">
+            <form>
+
+                <div class="mb-3">
+                    <label for="reviewContent" class="form-label">Review</label>
+                    <textarea class="form-control" id="reviewContent" rows="4"
+                        placeholder="Write your comments here"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="publicName" class="form-label">Name (displayed publicly, e.g., John S.)</label>
+                    <input type="text" class="form-control" id="publicName" placeholder="Enter your name (public)">
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email (private)">
+                    <small class="text-muted">How we use your data: We’ll only contact you about the review you left,
+                        and only if necessary. By submitting your review, you agree to Judge.me’s terms, privacy, and
+                        content policies.</small>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                    <button type="reset" class="btn btn-secondary">Cancel Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- 1ST CARD -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="image/Classic Flap Bag.png" class="card-img-top" alt="Classic Flap Bag">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mt-2">Dhennis C.</h5>
+                        <p class="fw-bold">Classic Flap Bag</p>
+                        <p class="card-text">Great value for the money! This product has been super helpful, and I’m
+                            really happy with
+                            it.</p>
+                        <p class="card-text"><strong>Date: </strong> 2024-09-04</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2ND CARD -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="image/Alma BB.png" class="card-img-top" alt="Alma BB">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mt-2">Selwyn G.</h5>
+                        <p class="fw-bold">Alma BB</p>
+                        <p class="card-text">This product is absolutely amazing! The quality is fantastic...</p>
+                        <p class="card-text"><strong>Date: </strong> 2024-09-16</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3RD CARD -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="image/Dior Book Tote.png" class="card-img-top" alt="Dior Book Tote">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mt-2">Jorence M.</h5>
+                        <p class="fw-bold">Dior Book Tote</p>
+                        <p class="card-text">Better than I expected! Service was great and the product is in good shape.
+                        </p>
+                        <p class="card-text"><strong>Date: </strong> 2024-09-28</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4TH CARD -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="image/Gucci Marmont Matelassé.png" class="card-img-top" alt="Gucci Marmont Matelassé">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mt-2">Orlando D.</h5>
+                        <p class="fw-bold">Gucci Marmont Matelassé</p>
+                        <p class="card-text">Not bad at all! Does the job well and seems to be pretty durable. I’d
+                            recommend it
+                        </p>
+                        <p class="card-text"><strong>Date:</strong> 2024-10-05</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5TH CARD -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="image/Bottega Veneta Cassette.png" class="card-img-top" alt="Bottega Veneta Cassette">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mt-2">Satria C.</h5>
+                        <p class="fw-bold">Bottega Veneta Cassette</p>
+                        <p class="card-text">Absolutely love this product! It’s exactly what I needed and works
+                            perfectly. Will
+                            definitely buy again
+                        </p>
+                        <p class="card-text"><strong>Date: </strong> 2024-10-20</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6TH CARD -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="image/Chanel Boy Bag.png" class="card-img-top" alt="Chanel Boy Bag">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mt-2">Lorelie D.</h5>
+                        <p class="fw-bold">Channel Boy Bag</p>
+                        <p class="card-text">Not bad at all! Does the job well and seems to be pretty durable. I’d
+                            recommend it
+                        </p>
+                        <p class="card-text"><strong>Date: </strong> 2024-10-24</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7TH CARD -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="image/Prada Nylon Backpack.png" class="card-img-top" alt="Chanel Boy Bag">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mt-2">Lester M.</h5>
+                        <p class="fw-bold">Prada Nylon Backpack</p>
+                        <p class="card-text">Not bad at all! Does the job well and seems to be pretty durable. I’d
+                            recommend it
+                        </p>
+                        <p class="card-text"><strong>Date: </strong> 2024-10-26</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8TH CARD -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <img src="image/Hermes Birkin 30.png" class="card-img-top" alt="Chanel Boy Bag">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mt-2">Lester M.</h5>
+                        <p class="fw-bold">Prada Nylon Backpack</p>
+                        <p class="card-text">Not bad at all! Does the job well and seems to be pretty durable. I’d
+                            recommend it
+                        </p>
+                        <p class="card-text"><strong>Date: </strong> 2024-10-26</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <script src="js/footer.js"></script>
+    </div>
+
+    <script src="Bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+        document.getElementById('toggleFormButton').addEventListener('click', function () {
+            const form = document.getElementById('reviewForm');
+            const button = this;
+
+            if (form.classList.contains('show')) {
+                form.classList.remove('show');
+                button.textContent = 'Write a Review';
+            } else {
+                form.classList.add('show');
+                button.textContent = 'Hide Review Form';
+            }
+        });
+    </script>
+</body>
+
+</html>

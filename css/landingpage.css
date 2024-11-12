@@ -1,0 +1,115 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.background-image {
+  background-image: url("/image/8dc5473fa91731c56a3d7c39e983c5fe.jpg")!important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  margin-top: 55px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.btn:hover {
+  background: #d2d0d0 !important;
+  opacity: 75%;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.background-image {
+  background-image: url('/landingpage/image/8dc5473fa91731c56a3d7c39e983c5fe.jpg');
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.floating-arrow {
+  animation: float 2s ease-in-out infinite;
+  z-index: 2;
+  position: absolute;
+  top: 530px;
+}
+
+.fa-angle-down {
+  font-size: 30px;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Container for horizontal scrolling */
+.scroll-container {
+  overflow-x: auto;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+/* Individual card styling */
+.review-card {
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card content styling */
+.card-body .stars {
+  color: #FFD700;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.review-card .card-img-top {
+  width: 100%; /* Ensures the image width matches the card */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image fills the space without stretching */
+}
